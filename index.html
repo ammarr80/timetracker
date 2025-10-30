@@ -3,143 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dashboard.css">
-  <script src="dashboard.js" defer></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>something</title>
+  <script src="dashboard.js" defer></script>
+  <link rel="stylesheet" href="dashboard.css">
+  <title>Document</title>
+  
+<style>
+  :root {
+    /* Primary */
+    --main: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --excercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --self: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    --dark:  hsl(226, 43%, 10%);
+    --default: hsl(235, 46%, 20%);
+    --mainNeutral: hsl(235, 45%, 61%);
+    --light: hsl(236, 100%, 87%);
+  }
+
+  body {
+    background: var(--dark);
+    font-family: "Rubik", sans-serif;
+    color: white;
+  }
+
+  /* Custom utility classes */
+  .bg-main { background-color: var(--main); }
+  .bg-work { background-color: var(--work); }
+  .bg-play { background-color: var(--play); }
+  .bg-study { background-color: var(--study); }
+  .bg-excercise { background-color: var(--excercise); }
+  .bg-social { background-color: var(--social); }
+  .bg-self { background-color: var(--self); }
+
+  .text-mainNeutral { color: var(--main); }
+  .text-work { color: var(--work); }
+  .text-play { color: var(--play); }
+  .text-study { color: var(--study); }
+  .text-excercise { color: var(--excercise); }
+  .text-social { color: var(--social); }
+  .text-self { color: var(--self); }
+
+  .bg-dark { background-color: var(--dark); }
+  .bg-default { background-color: var(--default); }
+  .bg-mainNeutral { background-color: var(--mainNeutral); }
+  .bg-light { background-color: var(--light); }
+
+  .text-dark { color: var(--dark); }
+  .text-default { color: var(--default); }
+  .text-mainNeutral { color: var(--mainNeutral); }
+  .text-light { color: var(--light); }
+</style>
 </head>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 <body>
 
-  <div id="mainContainer" class="flex justify-center items-center mt-[4%]">
-    <div id="mainParent">
-      <div id="rightContainer" class="">
-        <div id="info" class="cards">
-        <img id="img" src="example.webp" alt="photo">
-          <div id="report">
-            <p id="reporttext">Report for</p>
-            <p id="name">Ammar</p>
+    <main class="min-h-screen px-4 py-16 md:w-[100%] md:mx-auto">
+    <div id="parentContainer" class="min-w-[90%] min-h-screen md:m-0 flex md:min-w-[100%] flex-col gap-8 md:gap-4 md:border-2 md:border-red-500 md:grid md:min-h-[90dvh] md:grid-cols-[1fr_2fr] md:min-w-7xl lg:grid lg:grid-cols-[1fr_2fr] ">
+      <div id="infoContainer" class="max-w-[286px]  mx-auto md: md:border-red-900 md:min-h-[166dvh] lg:min-h-[80dvh] min-w-[275px] md:min-w-[240px] lg:justify-start">
+        <div id="upperArea" class="bg-main min-h-[25dvh] rounded-lg px-6 grid grid-cols-[1fr_2fr] items-center z-40 sticky md:py-20 md:px-2 md:flex md:flex-col md:gap-8 md:px-8 md:items-start md:max-w-[5xl] md:gap-0 lg:px-8 lg:w-full">
+          <div id="photo">
+            <img src="example.webp" alt="profile_picture" class="w-16 h-16 rounded-full z-20">
+          </div>
+          <div id="text z-10 m-[-10px]">
+            <p id="label" class="text-light tracking-wide text-sm">Report for</p>
+            <p id="name" class="text-white font-thin text-3xl sm:max-w-[205px] max-w-[120px]">Ammar boy</p>
           </div>
         </div>
-        <div id="links" class="cards">
-          <div id="atagContainer">
-            <a href="">Daily</a>
-            <a href="">Weekly</a>
-            <a href="">Monthly</a>
-          </div>
-        </div>
+          <nav id="lowerArea" class="flex justify-between bg-default min-h-[10dvh] pt-6 py-4 rounded-lg px-6 m-[-15px] w-[100%] mx-auto z-10 max-w-[286px] md:flex-col">
+            <a href="#" class="text-sm text-mainNeutral hover:text-white py-2">Daily</a>
+            <a href="#" class="text-sm text-mainNeutral hover:text-white py-2">Weekly</a>
+            <a href="#" class="text-sm text-mainNeutral hover:text-white py-2">Monthly</a>
+          </nav>
       </div>
-
-      <div id="leftContainer">
-        <div id="card2">
-          <div class="cardsimg" id="card2img">
-            <img src="./images/icon-work.svg" alt="">
+      <div id="cardsContainer" class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8">
+        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_1">
+          <div class="cardsSVGs bg-work h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
+            <img src="./images/icon-work.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
           </div>
-          <div class="cards">
-            <div>
-              <div id="label1" class="labels">
-                <p>Work</p>
-                <p class="">...</p>
-              </div>
-              <div id="time1" class="times">
-                <p class="timings">32hrs</p>
-                <p class="recentTime">Last week - 36hrs</p>
-              </div>
+          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
+            <div class="label flex justify-between items-center">
+              <p class="mb-4">Work</p>
+              <p class="mb-4 font-bold tracking-wide">...</p>
+            </div>
+            <div class="time flex justify-between items-center md:flex gap-4">
+              <p class="text-3xl font-thin md:text-2xl">32hrs</p>
+              <p class="text-light text-sm md:text-[12px]">Last week - 36hrs</p>
             </div>
           </div>
         </div>
-        <div id="card3">
-          <div class="cardsimg" id="card3img">
-            <img src="./images/icon-play.svg" alt="">
+        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_2">
+          <div class="cardsSVGs bg-play h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
+            <img src="./images/icon-play.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
           </div>
-          <div class="cards">
-            <div>
-              <div id="label2" class="labels">
-                <p>Play</p>
-                <p class="">...</p>
-              </div>
-              <div id="time2" class="times">
-                <p class="timings">32hrs</p>
-                <p class="recentTime">Last week - 36hrs</p>
-              </div>
+          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
+            <div class="label flex justify-between items-center">
+              <p class="mb-4">Play</p>
+              <p class="mb-4 font-bold tracking-wide">...</p>
+            </div>
+            <div class="time flex justify-between items-center md:flex gap-4">
+              <p class="text-3xl font-thin md:text-2xl">10hrs</p>
+              <p class="text-light text-sm md:text-[12px]">Last week - 8hrs</p>
             </div>
           </div>
         </div>
-        <div id="card4">
-          <div class="cardsimg" id="card4img">
-            <img src="./images/icon-study.svg" alt="">
+        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_3">
+          <div class="cardsSVGs bg-excercise h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
+            <img src="./images/icon-exercise.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
           </div>
-          <div class="cards">
-            <div>
-              <div id="label3" class="labels">
-                <p>Study</p>
-                <p class="">...</p>
-              </div>
-              <div id="time3" class="times">
-                <p class="timings">32hrs</p>
-                <p class="recentTime">Last week - 36hrs</p>
-              </div>
+          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
+            <div class="label flex justify-between items-center">
+              <p class="mb-4">Excercise</p>
+              <p class="mb-4 font-bold tracking-wide">...</p>
+            </div>
+            <div class="time flex justify-between items-center md:flex gap-4">
+              <p class="text-3xl font-thin md:text-2xl">4hrs</p>
+              <p class="text-light text-sm md:text-[12px]">Last week - 5hrs</p>
             </div>
           </div>
         </div>
-        <div id="card5">
-          <div class="cardsimg" id="card5img">
-            <img src="./images/icon-exercise.svg" alt="">
+        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_4">
+          <div class="cardsSVGs bg-social h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
+            <img src="./images/icon-social.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
           </div>
-          <div class="cards">
-            <div>
-              <div id="label4" class="labels">
-                <p>Excercise</p>
-                <p class="">...</p>
-              </div>
-              <div id="time4" class="times">
-                <p class="timings">32hrs</p>
-                <p class="recentTime">Last week - 36hrs</p>
-              </div>
+          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
+            <div class="label flex justify-between items-center">
+              <p class="mb-4">Social</p>
+              <p class="mb-4 font-bold tracking-wide">...</p>
+            </div>
+            <div class="time flex justify-between items-center md:flex gap-4">
+              <p class="text-3xl font-thin md:text-2xl">5hrs</p>
+              <p class="text-light text-sm md:text-[12px]">Last week - 10hrs</p>
             </div>
           </div>
         </div>
-        <div id="card6">
-          <div class="cardsimg" id="card6img">
-            <img src="./images/icon-social.svg" alt="">
+        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_5">
+          <div class="cardsSVGs bg-study h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
+            <img src="./images/icon-study.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
           </div>
-          <div class="cards">
-            <div>
-              <div id="label5" class="labels">
-                <p>Social</p>
-                <p class="">...</p>
-              </div>
-              <div id="time5" class="times">
-                <p class="timings">32hrs</p>
-                <p class="recentTime">Last week - 36hrs</p>
-              </div>
+          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
+            <div class="label flex justify-between items-center">
+              <p class="mb-4">Study</p>
+              <p class="mb-4 font-bold tracking-wide">...</p>
+            </div>
+            <div class="time flex justify-between items-center md:flex gap-4">
+              <p class="text-3xl font-thin md:text-2xl">0hrs</p>
+              <p class="text-light text-sm md:text-[12px]">Last week - 0hrs</p>
             </div>
           </div>
         </div>
-        <div id="card7">
-          <div class="cardsimg" id="card7img">
-            <img src="./images/icon-self-care.svg" alt="">
+        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_6">
+          <div class="cardsSVGs bg-self h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
+            <img src="./images/icon-self-care.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
           </div>
-          <div class="cards">
-            <div>
-              <img src="./../../" alt="">
-              <div id="label6" class="labels">
-                <p>Self care</p>
-                <p class="">...</p>
-              </div>
-              <div id="6" class="times">
-                <p class="timings">32hrs</p>
-                <p class="recentTime">Last week - 36hrs</p>
-              </div>
+          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
+            <div class="label flex justify-between items-center">
+              <p class="mb-4">Self care</p>
+              <p class="mb-4 font-bold tracking-wide">...</p>
+            </div>
+            <div class="time flex justify-between items-center md:flex gap-4">
+              <p class="text-3xl font-thin md:text-2xl">2hrs</p>
+              <p class="text-light text-sm md:text-[12px]">Last week - 2hrs</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
