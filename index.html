@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="dashboard.js" defer></script>
-  <link rel="stylesheet" href="dashboard.css">
-  <title>Document</title>
-  
-<style>
+    <title>Document</title>
+    <style>
   :root {
     /* Primary */
     --main: hsl(246, 80%, 60%);
@@ -64,118 +59,115 @@
 </style>
 </head>
 <body>
-
-    <main class="min-h-screen px-4 py-16 md:w-[100%] md:mx-auto">
-    <div id="parentContainer" class="min-w-[90%] min-h-screen md:m-0 flex md:min-w-[100%] flex-col gap-8 md:gap-4 md:border-2 md:border-red-500 md:grid md:min-h-[90dvh] md:grid-cols-[1fr_2fr] md:min-w-7xl lg:grid lg:grid-cols-[1fr_2fr] ">
-      <div id="infoContainer" class="max-w-[286px]  mx-auto md: md:border-red-900 md:min-h-[166dvh] lg:min-h-[80dvh] min-w-[275px] md:min-w-[240px] lg:justify-start">
-        <div id="upperArea" class="bg-main min-h-[20dvh] rounded-lg px-6 grid grid-cols-[1fr_2fr] items-center z-40 sticky md:py-20 md:px-2 md:flex md:flex-col md:gap-8 md:px-8 md:items-start md:max-w-[5xl] md:gap-0 lg:px-8 lg:w-full">
-          <div id="photo">
-            <img src="example.webp" alt="profile_picture" class="w-16 h-16 rounded-full z-20">
-          </div>
-          <div id="text z-10 m-[-10px]">
-            <p id="label" class="text-light tracking-wide text-sm">Report for</p>
-            <p id="name" class="text-white font-thin text-3xl sm:max-w-[205px] max-w-[120px]">Ammar boy</p>
-          </div>
+    <main class="max-w-[90%] md:max-w-[95%] md:min-w-[90%]  mx-auto border-red-600 min-h-screen flex flex-col gap-4 justify-center items-center py-4 md:grid md:grid-cols-[1fr_2fr] md: md:border-red-400 md:gap-0 lg:grid lg:grid-cols-[252px_720px]">
+        <div id="infoContainer" class=" border-blue-600 w-[90%] flex flex-col max-w-[295px] min-w-[225px] md: md:border-red-500 md:max-w-[240px]">
+            <div id="infoParent" class="flex items-center gap-3 bg-main py-5 rounded-lg px-4  border-purple-400 md:py-28 md:flex md:flex-col md:items-start md: md:border-green-700">
+                <div id="infoImg">
+                    <img src="example.webp" alt="profile_picture" class="w-16 h-16 rounded-full min-w-16 min-h-16  border-red-400">
+                </div>
+                <div id="info" class="">
+                    <p class="text-sm text-light">Report for</p>
+                    <p class="text-3xl font-thin min-w-[110px] md:max-w-[200px] md:min-w-[160px] md:text-4xl break-words">Ammar boy</p>
+                </div>
+            </div>
+            <nav id="linksContainer" class="flex justify-between py-5 bg-default px-4 md:py-8">
+                <a href="#" class="text-mainNeutral active:text-white text-sm  border-red-400">Daily</a>
+                <a href="#" class="text-mainNeutral active:text-white text-sm  border-red-400">Weekly</a>
+                <a href="#" class="text-mainNeutral active:text-white text-sm  border-red-400">Monthly</a>
+            </nav>
         </div>
-          <nav id="lowerArea" class="flex justify-between bg-default min-h-[10dvh] pt-6 py-4 rounded-lg px-6 m-[-15px] w-[100%] mx-auto z-10 max-w-[286px] md:flex-col">
-            <a href="#" class="text-sm text-mainNeutral hover:text-white py-2">Daily</a>
-            <a href="#" class="text-sm text-mainNeutral hover:text-white py-2">Weekly</a>
-            <a href="#" class="text-sm text-mainNeutral hover:text-white py-2">Monthly</a>
-          </nav>
-      </div>
-      <div id="cardsContainer" class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8">
-        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_1">
-          <div class="cardsSVGs bg-work h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
-            <img src="./images/icon-work.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
-          </div>
-          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
-            <div class="label flex justify-between items-center">
-              <p class="mb-4">Work</p>
-              <p class="mb-4 font-bold tracking-wide">...</p>
+        <div id="cardsContainer" class=" w-[90%] max-w-[295px] min-w-[225px] flex flex-col gap-2 md:grid md:grid-cols-2 md:border-red-600 md:min-w-[470px] md:max-w-[760px] md:px-2 lg:grid lg:grid-cols-3 lg:gap-16 lg:border-2 lg:border-pink-400 lg:w-[720px] py-2">
+            <div class="flex flex-col border-red-500 md:max-w-[400px]  border-purple-700 lg:min-w-[230px]">
+                <div class="cardsSVGs flex bg-work rounded-lg justify-end overflow-hidden md:min-w-[220px] md:max-w-[275px] lg:py-2 lg:max-w-[265px]">
+                    <img src="./images/icon-work.svg" alt="" class="w-20 h-20 z-10 mt-[-10px]  relative">
+                </div>
+                <div class="relative mt-[-30px] lg:mt-[-50px] z-20 py-6 rounded-lg bg-default px-4 md:min-w-[220px] md:max-w-[275px] lg:py-10">
+                    <div class="data flex justify-between rounded-lg px-2 items-center mb-4">
+                        <p class="label md:text-sm">Work</p>
+                        <p class="dots text-lg text-light md:text-sm">...</p>
+                    </div>
+                    <div class="timer flex justify-between bg-default items-center">
+                        <p class="timerP text-4xl font-thin md:text-3xl ">32hrs</p>
+                        <p class="recent text-sm text-mainNeutral md:text-xs">Last week - 49hrs</p>
+                    </div>
+                </div>
             </div>
-            <div class="time flex justify-between items-center md:flex gap-4">
-              <p class="text-3xl font-thin md:text-2xl">32hrs</p>
-              <p class="text-light text-sm md:text-[12px]">Last week - 36hrs</p>
+            <div class=" flex flex-col  border-red-500 md:max-w-[400px]  border-purple-700 lg:min-w-[230px]">
+                <div class="cardsSVGs flex bg-play rounded-lg justify-end overflow-hidden md:min-w-[220px] md:max-w-[275px] lg:py-2">
+                    <img src="./images/icon-play.svg" alt="" class="w-20 h-20 z-10 mt-[-10px]  relative">
+                </div>
+                <div class="relative mt-[-30px] lg:mt-[-50px] z-20 py-6 rounded-lg bg-default px-4 md:min-w-[220px] md:max-w-[275px] lg:py-10">
+                    <div class="data flex justify-between rounded-lg px-2 items-center mb-4">
+                        <p class="label md:text-sm">Play</p>
+                        <p class="dots text-lg text-light md:text-sm">...</p>
+                    </div>
+                    <div class="timer flex justify-between bg-default items-center">
+                        <p class="timerP text-4xl font-thin md:text-3xl">4hrs</p>
+                        <p class="recent text-sm text-mainNeutral md:text-xs">Last week - 4hrs</p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class=" flex flex-col  border-red-500 md:max-w-[400px]  border-purple-700 lg:min-w-[230px]">
+                <div class="cardsSVGs flex bg-study rounded-lg justify-end overflow-hidden md:min-w-[220px] md:max-w-[275px] lg:py-2">
+                    <img src="./images/icon-study.svg" alt="" class="w-20 h-20 z-10 mt-[-10px]  relative">
+                </div>
+                <div class="relative mt-[-30px] lg:mt-[-50px] z-20 py-6 rounded-lg bg-default px-4 md:min-w-[220pmax-w-[275px] lg:py-10">
+                    <div class="data flex justify-between rounded-lg px-2 items-center mb-4">
+                        <p class="label md:text-sm">Study</p>
+                        <p class="dots text-lg text-light md:text-sm">...</p>
+                    </div>
+                    <div class="timer flex justify-between bg-default items-center">
+                        <p class="timerP text-4xl font-thin md:text-3xl">3hrs</p>
+                        <p class="recent text-sm text-mainNeutral md:text-xs">Last week - 3hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" flex flex-col  border-red-500 md:max-w-[400px]  border-purple-700 lg:min-w-[230px]">
+                <div class="cardsSVGs flex bg-excercise justify-end overflow-hidden md:min-w-[220px] md:max-w-[275px] lg:py-2 rounded-lg">
+                    <img src="./images/icon-exercise.svg" alt="" class="w-20 h-20 z-10 mt-[-10px]  relative">
+                </div>
+                <div class="relative mt-[-30px] lg:mt-[-50px] z-20 py-6 rounded-lg bg-default px-4 md:min-w-[220pmax-w-[275px] lg:py-10">
+                    <div class="data flex justify-between rounded-lg px-2 items-center mb-4">
+                        <p class="label md:text-sm">Excercise</p>
+                        <p class="dots text-lg text-light md:text-sm">...</p>
+                    </div>
+                    <div class="timer flex justify-between bg-default items-center">
+                        <p class="timerP text-4xl font-thin md:text-3xl">6hrs</p>
+                        <p class="recent text-sm text-mainNeutral md:text-xs">Last week - 9hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" flex flex-col  border-red-500 md:max-w-[400px]  border-purple-700 lg:min-w-[230px]">
+                <div class="cardsSVGs flex bg-social rounded-lg justify-end overflow-hidden md:min-w-[220px] md:max-w-[275px] lg:py-2">
+                    <img src="./images/icon-social.svg" alt="" class="w-20 h-20 z-10 mt-[-10px]  relative">
+                </div>
+                <div class="relative mt-[-30px] lg:mt-[-50px] z-20 py-6 rounded-lg bg-default px-4 md:min-w-[220pmax-w-[275px] lg:py-10">
+                    <div class="data flex justify-between rounded-lg px-2 items-center mb-4">
+                        <p class="label md:text-sm">Social</p>
+                        <p class="dots text-lg text-light md:text-sm">...</p>
+                    </div>
+                    <div class="timer flex justify-between bg-default items-center">
+                        <p class="timerP text-4xl font-thin md:text-3xl">32hrs</p>
+                        <p class="recent text-sm text-mainNeutral md:text-xs">Last week - 36hrs</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" flex flex-col  border-red-500 md:max-w-[400px]  border-purple-700 lg:min-w-[230px]">
+                <div class="cardsSVGs flex bg-self rounded-lg justify-end overflow-hidden md:min-w-[220px] md:max-w-[275px] lg:py-2">
+                    <img src="./images/icon-self-care.svg" alt="" class="w-20 h-20 z-10 mt-[-10px]  relative">
+                </div>
+                <div class="relative mt-[-30px] lg:mt-[-50px] z-20 py-6 rounded-lg bg-default px-4 md:min-w-[220pmax-w-[275px] lg:py-10 ">
+                    <div class="data flex justify-between rounded-lg px-2 items-center mb-4">
+                        <p class="label md:text-sm">Self care</p>
+                        <p class="dots text-lg text-light md:text-sm">...</p>
+                    </div>
+                    <div class="timer flex justify-between bg-default items-center">
+                        <p class="timerP text-4xl font-thin md:text-3xl">1hr</p>
+                        <p class="recent text-sm text-mainNeutral md:text-xs">Last week - 2hrs</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_2">
-          <div class="cardsSVGs bg-play h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
-            <img src="./images/icon-play.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
-          </div>
-          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
-            <div class="label flex justify-between items-center">
-              <p class="mb-4">Play</p>
-              <p class="mb-4 font-bold tracking-wide">...</p>
-            </div>
-            <div class="time flex justify-between items-center md:flex gap-4">
-              <p class="text-3xl font-thin md:text-2xl">10hrs</p>
-              <p class="text-light text-sm md:text-[12px]">Last week - 8hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_3">
-          <div class="cardsSVGs bg-excercise h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
-            <img src="./images/icon-exercise.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
-          </div>
-          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
-            <div class="label flex justify-between items-center">
-              <p class="mb-4">Excercise</p>
-              <p class="mb-4 font-bold tracking-wide">...</p>
-            </div>
-            <div class="time flex justify-between items-center md:flex gap-4">
-              <p class="text-3xl font-thin md:text-2xl">4hrs</p>
-              <p class="text-light text-sm md:text-[12px]">Last week - 5hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_4">
-          <div class="cardsSVGs bg-social h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
-            <img src="./images/icon-social.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
-          </div>
-          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
-            <div class="label flex justify-between items-center">
-              <p class="mb-4">Social</p>
-              <p class="mb-4 font-bold tracking-wide">...</p>
-            </div>
-            <div class="time flex justify-between items-center md:flex gap-4">
-              <p class="text-3xl font-thin md:text-2xl">5hrs</p>
-              <p class="text-light text-sm md:text-[12px]">Last week - 10hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_5">
-          <div class="cardsSVGs bg-study h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
-            <img src="./images/icon-study.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
-          </div>
-          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
-            <div class="label flex justify-between items-center">
-              <p class="mb-4">Study</p>
-              <p class="mb-4 font-bold tracking-wide">...</p>
-            </div>
-            <div class="time flex justify-between items-center md:flex gap-4">
-              <p class="text-3xl font-thin md:text-2xl">0hrs</p>
-              <p class="text-light text-sm md:text-[12px]">Last week - 0hrs</p>
-            </div>
-          </div>
-        </div>
-        <div class="cards max-w-[286px] mx-auto md:border-red-900 lg:min-h-[80dvh] min-w-[275px] md:min-w-[180px]" id="card_6">
-          <div class="cardsSVGs bg-self h-full w-full rounded-2xl justify-end flex px-4  md:max-h-[12dvh]">
-            <img src="./images/icon-self-care.svg" alt="social_icon" class="w-16 h-16 rounded-2xl z-5 sticky">
-          </div>
-          <div class="data bg-default pt-6 px-6 pb-8 md:px-4 rounded-2xl z-10 sticky mt-[-20px]">
-            <div class="label flex justify-between items-center">
-              <p class="mb-4">Self care</p>
-              <p class="mb-4 font-bold tracking-wide">...</p>
-            </div>
-            <div class="time flex justify-between items-center md:flex gap-4">
-              <p class="text-3xl font-thin md:text-2xl">2hrs</p>
-              <p class="text-light text-sm md:text-[12px]">Last week - 2hrs</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 </body>
 </html>
